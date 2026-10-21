@@ -24,6 +24,9 @@ O líder do projeto é Deus. Nós somos servos e organizadores.
 - Propósito, parcerias e uso comercial: Organizador.
 - Na falta de consenso, decide o Organizador, ouvindo o CTO, com oração.
 
+## Custos e transparência
+Os custos de operação podem ser cobertos por patrocinadores e/ou pela própria igreja que usa o sistema. O Instituto não tem lucro: cada igreja paga, quando for o caso, apenas o custo real da sua operação, com prestação de contas transparente.
+
 ## Proteção da `main`
 - Merge apenas via Pull Request com 1 aprovação e CI verde.
 - Revisão obrigatória dos donos de código (`CODEOWNERS`).
