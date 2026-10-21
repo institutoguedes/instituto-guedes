@@ -12,29 +12,27 @@ Construir, de forma aberta e voluntária, ferramentas simples que ajudem igrejas
 
 ## O problema
 
-Na primeira igreja atendida, a **igreja-piloto (igreja piloto, Salvador)**, ouvimos:
+Em conversas com igrejas, ouvimos dores recorrentes:
 
-- A liderança não tem uma visão única do que acontece (escalas, voluntários, estoque de cestas básicas, eventos).
+- A liderança não tem uma visão única do que acontece (escalas, voluntários, estoques, eventos).
 - A informação fica espalhada em grupos de WhatsApp e em várias ferramentas.
-- A plataforma atual é robusta demais e o público 40+ tem dificuldade de usar.
+- Ferramentas atuais costumam ser complexas demais para parte do público.
 - O cadastro de visitantes e novos membros não acontece.
-- Os departamentos não conversam entre si (ex.: voluntário afastado em um ministério segue servindo em outro).
+- Os departamentos não conversam entre si.
 - Decisões sobre eventos e campanhas são tomadas sem dados.
 
-> "As pessoas inserem dados no sistema e ninguém os consome. Mudar de ferramenta sem mudar o processo não resolve."
-
-Detalhes em [docs/discovery-igreja-piloto.md](docs/discovery-igreja-piloto.md).
+Os registros de discovery com igrejas parceiras são confidenciais e ficam no quadro de tarefas interno do time (Linear), não neste repositório.
 
 ## O que vamos construir (MVP)
 
-**Fase 0 · Discovery de processos:** mapear com a igreja-piloto a jornada do visitante/novo membro e as funcionalidades mais usadas da ferramenta atual.
+**Fase 0 · Discovery de processos:** mapear com a igreja piloto a jornada do visitante/novo membro e as funcionalidades mais usadas da ferramenta atual.
 
 **Fase 1 · Plataforma de gestão (os "olhos"):**
 - Painel da liderança: a igreja inteira em uma tela.
 - Cadastro de visitantes e membros, com autocadastro.
 - Voluntários e escalas por ministério, com situação visível a todos os departamentos.
 - Demandas com responsável, prazo e conclusão.
-- Controle de estoque (ex.: cestas básicas).
+- Controle de estoque (ex.: doações).
 - UX muito simples, pensada para o público 40+.
 
 **Fase 2 · Assistentes por setor (os "braços"):** agentes com regras por ministério (visitante, louvor e escalas, estoque) que consultam o sistema antes de perguntar, são proativos sem ser invasivos e aceitam texto ou áudio. Testes primeiro no Telegram, depois no WhatsApp oficial (API da Meta).
@@ -46,10 +44,10 @@ Arquitetura proposta: [docs/arquitetura.md](docs/arquitetura.md).
 ## Roadmap
 
 - [ ] Sprint 1 · Fundação: primeiros fluxos de tela, repositório e quadro de tarefas, estimativa de custos, assistente de teste no Telegram
-- [ ] 2ª sessão com a igreja-piloto: jornada do visitante passo a passo
+- [ ] 2ª sessão com a igreja piloto: jornada do visitante passo a passo
 - [ ] PRD (conduzido pelo Éric)
 - [ ] MVP da plataforma de gestão
-- [ ] Piloto na igreja-piloto
+- [ ] Piloto na primeira igreja parceira
 - [ ] Assistentes conversacionais
 - [ ] Multi-igreja
 

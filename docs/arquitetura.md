@@ -23,4 +23,4 @@ Pessoas (visitantes/membros), Voluntários e escalas, Demandas, Estoque, Painel,
 ## Questões em aberto
 - Hospedagem e banco de dados (priorizar opções gratuitas/baixo custo).
 - Custo do WhatsApp oficial por volume de mensagens.
-- O que aproveitar da ferramenta atual da igreja-piloto.
+- O que aproveitar da ferramenta atual da igreja piloto.
