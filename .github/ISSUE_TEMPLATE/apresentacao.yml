@@ -1,0 +1,28 @@
+name: Apresentação de voluntário
+description: Quero servir no Instituto Guedes
+title: "Apresentação: <seu nome>"
+labels: ["voluntário"]
+body:
+  - type: input
+    id: nome
+    attributes: {label: Nome}
+    validations: {required: true}
+  - type: dropdown
+    id: area
+    attributes:
+      label: Área de interesse
+      options: [Desenvolvimento front-end, Desenvolvimento back-end, Design/UX, Suporte/Infra, Dados/IA, Documentação, Outro]
+    validations: {required: true}
+  - type: textarea
+    id: experiencia
+    attributes: {label: Experiência e tecnologias}
+  - type: input
+    id: disponibilidade
+    attributes: {label: Disponibilidade semanal (horas)}
+  - type: checkboxes
+    id: aceite
+    attributes:
+      label: Compromisso
+      options:
+        - label: Li e aceito o Código de Conduta e o propósito do projeto
+          required: true

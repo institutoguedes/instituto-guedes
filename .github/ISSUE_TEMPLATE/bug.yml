@@ -1,0 +1,16 @@
+name: Bug
+description: Algo não está funcionando
+labels: ["bug"]
+body:
+  - type: textarea
+    id: descricao
+    attributes: {label: O que aconteceu?}
+    validations: {required: true}
+  - type: textarea
+    id: passos
+    attributes: {label: Passos para reproduzir}
+  - type: textarea
+    id: esperado
+    attributes: {label: O que era esperado?}
+  - type: markdown
+    attributes: {value: "Não inclua dados pessoais reais de membros ou visitantes."}

@@ -1,0 +1,16 @@
+name: Funcionalidade
+description: Sugira uma melhoria ou nova funcionalidade
+labels: ["funcionalidade"]
+body:
+  - type: textarea
+    id: problema
+    attributes: {label: Qual problema da igreja isso resolve?}
+    validations: {required: true}
+  - type: textarea
+    id: proposta
+    attributes: {label: Proposta}
+  - type: dropdown
+    id: area
+    attributes:
+      label: Área
+      options: [Painel da liderança, Visitantes e membros, Voluntários e escalas, Demandas, Estoque, Assistentes, Outro]
