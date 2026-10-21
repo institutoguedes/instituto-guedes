@@ -94,4 +94,9 @@ O código é licenciado sob a **[GNU AGPL-3.0](LICENSE)**. Igrejas e ministério
 
 ## Sustentabilidade
 
-O Instituto não cobra das igrejas. Os custos de infraestrutura serão cobertos por patrocinadores, que poderão ser divulgados no rodapé da plataforma.
+O Instituto não tem fins lucrativos e não lucra com as igrejas. Os custos de operação (servidor, banco de dados, WhatsApp oficial/Meta e outros serviços) podem ser cobertos:
+
+- por **patrocinadores**, que poderão ser divulgados no rodapé da plataforma; e/ou
+- pela **própria igreja que usa o sistema**, que pode arcar com os custos da sua operação.
+
+Tudo com transparência: a igreja paga apenas o custo real da sua operação, sem margem de lucro para o Instituto.
