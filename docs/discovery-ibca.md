@@ -28,4 +28,4 @@ Resumo da reunião com a IBCA (Igreja Batista do Caminho das Árvores, Salvador,
 - Definir infraestrutura e regras do time voluntário.
 
 ## Sustentabilidade
-Infraestrutura custeada por patrocinadores, com divulgação no rodapé da plataforma.
+Custos de operação (servidor, banco de dados, WhatsApp oficial) cobertos por patrocinadores, com divulgação no rodapé da plataforma, e/ou pela própria igreja que usa o sistema, de forma transparente e sem lucro para o Instituto. Igrejas atendidas também podem se tornar apoiadoras.
