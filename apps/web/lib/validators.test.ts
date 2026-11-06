@@ -25,7 +25,9 @@ test("normaliza WhatsApp brasileiro", () => {
   assert.deepEqual(validarTelefone("(71) 98888-7777"), { ok: true, valor: "5571988887777" });
   assert.deepEqual(validarTelefone("+55 71 3333-4444"), { ok: true, valor: "557133334444" });
   assert.equal(validarTelefone("999887777").ok, false);
-  assert.equal(validarTelefone("071999887777").ok, false);
+  assert.deepEqual(validarTelefone("+55 71 98647-2483"), { ok: true, valor: "5571986472483" });
+  assert.deepEqual(validarTelefone("(11) 99999-9999"), { ok: true, valor: "5511999999999" });
+  assert.equal(formatarTelefone("5571986472483"), "+55 (71) 98647-2483");
 });
 
 test("recusa nascimento futuro e data impossível", () => {

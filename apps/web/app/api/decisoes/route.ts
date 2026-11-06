@@ -1,5 +1,6 @@
 import { respostaArquivo, respostaPlanilha } from "@/lib/csv";
 import { cartaoContatos, linhasInscritos, listaNumeros } from "@/lib/exportacao";
+import { avisarCadastro } from "@/lib/aviso";
 import { falhou, ipDe, jsonErro, jsonOk, lerJson } from "@/lib/http";
 import { podeRegistrarDecisao } from "@/lib/limite";
 import { listarDecisoes, salvarDecisao } from "@/lib/queries";
@@ -74,6 +75,15 @@ export async function POST(request: Request) {
       cidade: cidade.valor,
       whatsapp: whatsapp.valor,
     });
+    if (!salva.jaExistia) {
+      await avisarCadastro({
+        origem: "Decisão",
+        nome: nome.valor,
+        telefone: whatsapp.valor,
+        cidade: cidade.valor,
+        nascimento: nascimento.valor,
+      });
+    }
     return jsonOk(salva, salva.jaExistia ? 200 : 201);
   } catch (erro) {
     console.error(erro);

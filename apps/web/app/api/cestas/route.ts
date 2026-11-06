@@ -1,5 +1,6 @@
 import { respostaPlanilha } from "@/lib/csv";
 import { formatarDataHora, formatarTelefone } from "@/lib/format";
+import { avisarCadastro } from "@/lib/aviso";
 import { falhou, jsonErro, jsonOk, lerJson } from "@/lib/http";
 import { ajustarTotalCestas, estoque, listarEntregas, registrarEntrega } from "@/lib/queries";
 import { validarCidade, validarNome, validarQuantidade, validarTelefone, validarTotalCestas } from "@/lib/validators";
@@ -68,6 +69,13 @@ export async function POST(request: Request) {
         409,
       );
     }
+    await avisarCadastro({
+      origem: "Cesta",
+      nome: nome.valor,
+      telefone: telefone.valor,
+      cidade: cidade.valor,
+      extra: `Quantidade: ${quantidade.valor}`,
+    });
     return jsonOk({ entrega: registro.entrega, estoque: registro.estoque }, 201);
   } catch (erro) {
     console.error(erro);

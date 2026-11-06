@@ -1,6 +1,7 @@
 import { respostaPlanilha } from "@/lib/csv";
 import { rotuloArea, rotuloChamada, type Area } from "@/lib/domain";
 import { formatarDataHora, formatarTelefone } from "@/lib/format";
+import { avisarCadastro } from "@/lib/aviso";
 import { falhou, jsonErro, jsonOk, lerJson } from "@/lib/http";
 import { listarAtendimentos, salvarAtendimento } from "@/lib/queries";
 import {
@@ -126,6 +127,23 @@ export async function POST(request: Request) {
       sintomas: sintomas.valor,
       motivo: motivo.valor,
       observacoes: observacoes.valor,
+    });
+    const detalhes = [
+      `Área: ${rotuloArea(area.valor)}`,
+      `Chamada: ${rotuloChamada(chamada.valor)}`,
+      `Especialidade: ${especialidade.valor}`,
+      profissional.valor ? `Quem atendeu: ${profissional.valor}` : null,
+      sintomas.valor ? `Sintomas: ${sintomas.valor}` : null,
+      motivo.valor ? `Motivo: ${motivo.valor}` : null,
+      observacoes.valor ? `Observações: ${observacoes.valor}` : null,
+    ]
+      .filter((linha) => linha != null)
+      .join("\n");
+    await avisarCadastro({
+      origem: "Ficha",
+      nome: nome.valor,
+      telefone: telefone.valor,
+      extra: detalhes,
     });
     return jsonOk({ id }, 201);
   } catch (erro) {
