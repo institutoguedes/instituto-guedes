@@ -1,0 +1,12 @@
+{
+  "name": "instituto-guedes",
+  "private": true,
+  "scripts": {
+    "dev": "npm run dev --workspace @instituto/cruzada",
+    "build": "npm run build --workspace @instituto/cruzada",
+    "start": "npm run start --workspace @instituto/cruzada",
+    "typecheck": "npm run typecheck --workspace @instituto/cruzada",
+    "test": "npm run test --workspace @instituto/cruzada"
+  },
+  "workspaces": ["apps/web"]
+}
