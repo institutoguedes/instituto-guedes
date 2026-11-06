@@ -1,7 +1,6 @@
 import { respostaPlanilha } from "@/lib/csv";
 import { rotuloArea, rotuloChamada, type Area } from "@/lib/domain";
 import { formatarDataHora, formatarTelefone } from "@/lib/format";
-import { barrarVisitante } from "@/lib/guard";
 import { falhou, jsonErro, jsonOk, lerJson } from "@/lib/http";
 import { listarAtendimentos, salvarAtendimento } from "@/lib/queries";
 import {
@@ -29,10 +28,6 @@ function areaDaUrl(valor: string | null): Area | null | Response {
 }
 
 export async function GET(request: Request) {
-  const bloqueio = await barrarVisitante();
-  if (bloqueio) {
-    return bloqueio;
-  }
   const url = new URL(request.url);
   const area = areaDaUrl(url.searchParams.get("area"));
   if (area instanceof Response) {
@@ -77,10 +72,6 @@ export async function GET(request: Request) {
 }
 
 export async function POST(request: Request) {
-  const bloqueio = await barrarVisitante();
-  if (bloqueio) {
-    return bloqueio;
-  }
   const corpo = await lerJson(request);
   if (!corpo) {
     return jsonErro("Não entendi os dados enviados.", 400);

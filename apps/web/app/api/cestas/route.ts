@@ -1,6 +1,5 @@
 import { respostaPlanilha } from "@/lib/csv";
 import { formatarDataHora, formatarTelefone } from "@/lib/format";
-import { barrarVisitante } from "@/lib/guard";
 import { falhou, jsonErro, jsonOk, lerJson } from "@/lib/http";
 import { ajustarTotalCestas, estoque, listarEntregas, registrarEntrega } from "@/lib/queries";
 import { validarCidade, validarNome, validarQuantidade, validarTelefone, validarTotalCestas } from "@/lib/validators";
@@ -9,10 +8,6 @@ export const dynamic = "force-dynamic";
 export const runtime = "nodejs";
 
 export async function GET(request: Request) {
-  const bloqueio = await barrarVisitante();
-  if (bloqueio) {
-    return bloqueio;
-  }
   const url = new URL(request.url);
   try {
     const [caixa, entregas] = await Promise.all([estoque(), listarEntregas(10000)]);
@@ -37,10 +32,6 @@ export async function GET(request: Request) {
 }
 
 export async function POST(request: Request) {
-  const bloqueio = await barrarVisitante();
-  if (bloqueio) {
-    return bloqueio;
-  }
   const corpo = await lerJson(request);
   if (!corpo) {
     return jsonErro("Não entendi os dados enviados.", 400);
@@ -85,10 +76,6 @@ export async function POST(request: Request) {
 }
 
 export async function PATCH(request: Request) {
-  const bloqueio = await barrarVisitante();
-  if (bloqueio) {
-    return bloqueio;
-  }
   const corpo = await lerJson(request);
   if (!corpo) {
     return jsonErro("Não entendi os dados enviados.", 400);

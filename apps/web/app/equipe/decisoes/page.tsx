@@ -2,7 +2,6 @@ import Link from "next/link";
 import { ExportarWhatsApp } from "@/components/ExportarWhatsApp";
 import { MolduraEquipe } from "@/components/MolduraEquipe";
 import { formatarData, formatarDataHora, formatarTelefone, linkWhatsApp } from "@/lib/format";
-import { exigirEquipe } from "@/lib/guard";
 import { listarDecisoes } from "@/lib/queries";
 import { buscaLivre } from "@/lib/validators";
 
@@ -11,7 +10,6 @@ export default async function DecisoesPage({
 }: {
   searchParams: Promise<{ q?: string }>;
 }) {
-  await exigirEquipe();
   const { q } = await searchParams;
   const busca = buscaLivre(q);
 

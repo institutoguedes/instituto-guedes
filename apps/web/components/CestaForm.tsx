@@ -54,7 +54,7 @@ export function CestaForm({ restantes }: { restantes: number }) {
       </label>
       <label className="campo">
         <span>Telefone</span>
-        <input name="telefone" type="tel" inputMode="tel" autoComplete="tel" placeholder="71 99999-9999" required />
+        <input name="telefone" type="tel" inputMode="tel" autoComplete="tel" placeholder="(11) 99999-9999" required />
       </label>
       <label className="campo">
         <span>Cidade</span>

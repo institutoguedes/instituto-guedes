@@ -72,7 +72,7 @@ export function DecisaoForm() {
       </label>
       <label className="campo">
         <span>WhatsApp (com DDD)</span>
-        <input name="whatsapp" type="tel" inputMode="tel" autoComplete="tel" placeholder="(71) 99999-9999" required />
+        <input name="whatsapp" type="tel" inputMode="tel" autoComplete="tel" placeholder="(11) 99999-9999" required />
       </label>
       <label className="consent">
         <input name="autoriza" type="checkbox" required />

@@ -1,12 +1,9 @@
 import Link from "next/link";
 import { ExportarWhatsApp } from "@/components/ExportarWhatsApp";
 import { MolduraEquipe } from "@/components/MolduraEquipe";
-import { Sair } from "@/components/Sair";
-import { exigirEquipe } from "@/lib/guard";
 import { resumo } from "@/lib/queries";
 
 export default async function PainelPage() {
-  await exigirEquipe();
   try {
     const dados = await resumo();
     return (
@@ -36,7 +33,6 @@ export default async function PainelPage() {
           </div>
           <div className="stack">
             <ExportarWhatsApp />
-            <Sair />
           </div>
         </main>
       </MolduraEquipe>

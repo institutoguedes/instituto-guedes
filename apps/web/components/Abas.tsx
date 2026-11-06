@@ -2,9 +2,9 @@ import Link from "next/link";
 
 const ABAS = [
   { id: "decisao", href: "/", rotulo: "Aceitei Jesus" },
-  { id: "saude", href: "/?aba=saude", rotulo: "Saúde" },
-  { id: "atendimento", href: "/?aba=atendimento", rotulo: "Atendimento Online" },
-  { id: "cestas", href: "/?aba=cestas", rotulo: "Cestas Básicas" },
+  { id: "saude", href: "/saude", rotulo: "Saúde" },
+  { id: "atendimento", href: "/atendimento", rotulo: "Atendimento Online" },
+  { id: "cestas", href: "/cestas", rotulo: "Cestas Básicas" },
 ] as const;
 
 export type AbaEvento = (typeof ABAS)[number]["id"];

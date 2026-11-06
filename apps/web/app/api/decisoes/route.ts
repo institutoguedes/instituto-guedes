@@ -1,6 +1,5 @@
 import { respostaArquivo, respostaPlanilha } from "@/lib/csv";
 import { cartaoContatos, linhasInscritos, listaNumeros } from "@/lib/exportacao";
-import { barrarVisitante } from "@/lib/guard";
 import { falhou, ipDe, jsonErro, jsonOk, lerJson } from "@/lib/http";
 import { podeRegistrarDecisao } from "@/lib/limite";
 import { listarDecisoes, salvarDecisao } from "@/lib/queries";
@@ -10,10 +9,6 @@ export const dynamic = "force-dynamic";
 export const runtime = "nodejs";
 
 export async function GET(request: Request) {
-  const bloqueio = await barrarVisitante();
-  if (bloqueio) {
-    return bloqueio;
-  }
   const url = new URL(request.url);
   const busca = buscaLivre(url.searchParams.get("q") ?? undefined);
   try {

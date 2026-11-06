@@ -3,7 +3,6 @@ import { AtendimentoForm } from "@/components/AtendimentoForm";
 import { MolduraEquipe } from "@/components/MolduraEquipe";
 import { AREAS, rotuloArea, rotuloChamada, type Area } from "@/lib/domain";
 import { formatarDataHora, formatarTelefone } from "@/lib/format";
-import { exigirEquipe } from "@/lib/guard";
 import { listarAtendimentos } from "@/lib/queries";
 import { validarArea } from "@/lib/validators";
 
@@ -12,7 +11,6 @@ export default async function AtendimentosPage({
 }: {
   searchParams: Promise<{ area?: string }>;
 }) {
-  await exigirEquipe();
   const { area: areaParam } = await searchParams;
   const areaInformada = validarArea(areaParam);
   const area: Area | null = areaInformada.ok ? areaInformada.valor : null;

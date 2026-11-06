@@ -3,11 +3,9 @@ import { CestaForm } from "@/components/CestaForm";
 import { DesfazerEntrega } from "@/components/DesfazerEntrega";
 import { MolduraEquipe } from "@/components/MolduraEquipe";
 import { formatarDataHora, formatarTelefone } from "@/lib/format";
-import { exigirEquipe } from "@/lib/guard";
 import { estoque, listarEntregas } from "@/lib/queries";
 
 export default async function CestasPage() {
-  await exigirEquipe();
   try {
     const [caixa, entregas] = await Promise.all([estoque(), listarEntregas(200)]);
     const percentual = caixa.total === 0 ? 0 : Math.round((caixa.restantes / caixa.total) * 100);

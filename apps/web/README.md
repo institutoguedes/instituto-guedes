@@ -1,6 +1,6 @@
 # Cruzada Evangelística
 
-Site do evento, feito para o celular. Na mesma tela ficam as abas Aceitei Jesus, Saúde, Atendimento Online e Cestas Básicas. A pessoa deixa o contato. A equipe, com o código uma vez por celular, registra saúde, atendimento e cestas.
+Site do evento, feito para o celular. As abas Aceitei Jesus, Saúde, Atendimento Online e Cestas Básicas abrem direto, sem código. A pessoa deixa o contato e a equipe registra o atendimento na hora.
 
 ## O que guarda
 
@@ -22,7 +22,7 @@ npm run dev
 
 Na raiz do repositório, `npm run dev` sobe o mesmo aplicativo.
 
-A área da equipe pede o `STAFF_PIN`. Ele não fica no código.
+As listas e as planilhas ficam em `/equipe`, também sem código.
 
 ## Exportar para o WhatsApp
 

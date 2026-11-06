@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Cormorant_Garamond, Source_Sans_3 } from "next/font/google";
+import { Cormorant_Garamond, Karla } from "next/font/google";
 import "./globals.css";
 
 const display = Cormorant_Garamond({
@@ -8,9 +8,9 @@ const display = Cormorant_Garamond({
   variable: "--font-display",
 });
 
-const corpo = Source_Sans_3({
+const corpo = Karla({
   subsets: ["latin"],
-  weight: ["400", "600", "700"],
+  weight: ["400", "500", "600", "700"],
   variable: "--font-body",
 });
 
@@ -20,7 +20,13 @@ export const metadata: Metadata = {
     template: "%s · Cruzada Evangelística",
   },
   description:
-    "Cristo a Verdade que Liberta. Deixe seu contato para uma liderança caminhar com você depois da decisão por Jesus.",
+    "Você aceitou Jesus na Cruzada Evangelística? Deixe seu contato para ser acompanhado por líderes da sua região.",
+  openGraph: {
+    title: "Aceitei Jesus — Cruzada Evangelística",
+    description: "Deixe seu contato para ser acompanhado na sua caminhada com Cristo.",
+    type: "website",
+    locale: "pt_BR",
+  },
   applicationName: "Cruzada Evangelística",
   icons: { icon: "/icon.png", apple: "/icon.png" },
   manifest: "/manifest.webmanifest",
