@@ -23,6 +23,17 @@ Em conversas com igrejas, ouvimos dores recorrentes:
 
 Os registros de discovery com igrejas parceiras são confidenciais e ficam no quadro de tarefas interno do time (Linear), não neste repositório.
 
+## Cruzada Evangelística
+
+O primeiro uso do Instituto é o site do evento, em [`apps/web`](apps/web/README.md):
+
+- cadastro de quem aceitou Jesus (nome, nascimento, cidade e WhatsApp);
+- ficha de atendimento jurídico, psicológico, espiritual e de saúde;
+- controle das cestas básicas, com 50 unidades no início;
+- planilha e mensagem de WhatsApp para a liderança continuar a caminhada.
+
+Os contatos ficam no banco de dados, nunca neste repositório.
+
 ## O que vamos construir (MVP)
 
 **Fase 0 · Discovery de processos:** mapear com a igreja piloto a jornada do visitante/novo membro e as funcionalidades mais usadas da ferramenta atual.
