@@ -42,13 +42,16 @@ export function DecisaoForm() {
 
   if (estado !== "formulario") {
     return (
-      <section className="card sucesso" role="status">
+      <section className="sucesso stack" role="status">
         <h2>{estado === "salvo" ? "Que alegria." : "Contato já registrado."}</h2>
         <p>
           {estado === "salvo"
             ? "Seu contato foi guardado. Em breve alguém da sua região vai falar com você pelo WhatsApp."
             : "Esse WhatsApp já foi registrado hoje. A liderança já tem o seu contato."}
         </p>
+        <button className="btn btn-ghost" type="button" onClick={() => setEstado("formulario")}>
+          Registrar outra pessoa
+        </button>
       </section>
     );
   }
@@ -68,8 +71,8 @@ export function DecisaoForm() {
         <input name="cidade" autoComplete="address-level2" placeholder="Ex.: Salvador" required maxLength={120} />
       </label>
       <label className="campo">
-        <span>WhatsApp</span>
-        <input name="whatsapp" type="tel" inputMode="tel" autoComplete="tel" placeholder="71 99999-9999" required />
+        <span>WhatsApp (com DDD)</span>
+        <input name="whatsapp" type="tel" inputMode="tel" autoComplete="tel" placeholder="(71) 99999-9999" required />
       </label>
       <label className="consent">
         <input name="autoriza" type="checkbox" required />
@@ -87,7 +90,7 @@ export function DecisaoForm() {
         </p>
       ) : null}
       <button className="btn" type="submit" disabled={enviando}>
-        {enviando ? "Salvando..." : "Guardar meu contato"}
+        {enviando ? "Salvando..." : "Quero ser acompanhado"}
       </button>
     </form>
   );

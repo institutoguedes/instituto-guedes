@@ -1,6 +1,6 @@
 # Cruzada Evangelística
 
-Site do evento, feito para o celular. A pessoa que aceitou Jesus deixa o contato. A equipe registra atendimentos e controla as cestas básicas.
+Site do evento, feito para o celular. Na mesma tela ficam as abas Aceitei Jesus, Saúde, Atendimento Online e Cestas Básicas. A pessoa deixa o contato. A equipe, com o código uma vez por celular, registra saúde, atendimento e cestas.
 
 ## O que guarda
 

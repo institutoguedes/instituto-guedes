@@ -1,11 +1,11 @@
 :root {
-  --ink: #1a1208;
-  --ink-soft: #4a3824;
-  --gold: #a6843d;
+  --ink: #3f3428;
+  --ink-soft: #6d6458;
+  --gold: #a67c3d;
   --gold-bright: #e6c98a;
-  --line: #e4d3b6;
-  --cream: #f4efe6;
-  --paper: #fffdf9;
+  --line: #eadfce;
+  --cream: #f6f1e7;
+  --paper: #fffdf8;
   --danger: #7a2e2e;
   --good: #145233;
   --shadow: 0 18px 40px rgba(48, 28, 8, 0.08);
@@ -20,10 +20,8 @@ body {
   margin: 0;
   min-height: 100vh;
   color: var(--ink);
-  background:
-    radial-gradient(900px 420px at 50% -80px, #fff 0%, transparent 60%),
-    var(--cream);
-  font-family: var(--font-body), "Nunito Sans", sans-serif;
+  background: var(--cream);
+  font-family: var(--font-body), "Source Sans 3", sans-serif;
   font-size: 1.125rem;
   line-height: 1.45;
 }
@@ -34,8 +32,9 @@ a { color: inherit; }
 
 h1, h2, h3 {
   font-family: var(--font-display), Georgia, serif;
-  font-weight: 560;
-  letter-spacing: -0.03em;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: #6d5133;
   line-height: 1.12;
   margin: 0;
 }
@@ -48,14 +47,13 @@ p { margin: 0; }
 button, input, textarea, select { font: inherit; color: inherit; }
 
 .marca {
-  background: #100c08;
   display: flex;
   justify-content: center;
-  padding: 8px 12px 0;
+  padding: 18px 16px 6px;
 }
 
 .marca img {
-  width: min(460px, 94vw);
+  width: min(300px, 78vw);
   height: auto;
 }
 
@@ -136,8 +134,9 @@ time, .mudo { color: var(--ink-soft); font-size: 0.98rem; }
 }
 
 .btn {
-  background: linear-gradient(180deg, #f0d7a2, #c49645);
-  color: #24180c;
+  background: linear-gradient(180deg, #c6a15c, #a67c3d);
+  color: #3a2914;
+  box-shadow: 0 10px 22px rgba(120, 82, 32, 0.16);
 }
 
 .btn-ink {
@@ -194,7 +193,8 @@ details summary {
 .campo {
   display: grid;
   gap: 8px;
-  font-weight: 800;
+  font-weight: 700;
+  color: #5c4632;
 }
 
 .campo span { font-size: 1.02rem; }
@@ -233,6 +233,7 @@ textarea { min-height: 120px; resize: vertical; }
 
 .aviso { background: #fdecea; color: var(--danger); }
 .sucesso { background: #e7f5ec; color: var(--good); }
+.sucesso h2 { margin-top: 0; color: var(--good); }
 
 .numeros {
   display: grid;
@@ -379,6 +380,61 @@ textarea { min-height: 120px; resize: vertical; }
 :focus-visible {
   outline: 3px solid #9a7433;
   outline-offset: 2px;
+}
+
+.abas {
+  width: min(520px, calc(100% - 28px));
+  margin: 8px auto 14px;
+  background: #f3eadb;
+  border-radius: 22px;
+  padding: 8px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 4px;
+}
+
+.abas a {
+  color: #5c4632;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1rem;
+  min-height: 44px;
+  padding: 8px 14px;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.abas a[aria-current="page"] {
+  background: #fff;
+  box-shadow: 0 4px 14px rgba(80, 50, 20, 0.08);
+}
+
+.folha {
+  width: min(520px, calc(100% - 28px));
+  margin: 0 auto 28px;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 28px;
+  box-shadow: 0 18px 46px rgba(90, 60, 20, 0.06);
+  padding: 28px 20px 22px;
+}
+
+.folha h1,
+.folha .lead { text-align: center; }
+
+.folha h1 { margin-bottom: 8px; }
+
+.ajuda {
+  margin: 18px auto 28px;
+  text-align: center;
+}
+
+.ajuda a {
+  color: #6d5133;
+  font-weight: 700;
 }
 
 @media (min-width: 800px) {

@@ -1,14 +1,16 @@
 import type { Metadata, Viewport } from "next";
-import { Fraunces, Nunito_Sans } from "next/font/google";
+import { Cormorant_Garamond, Source_Sans_3 } from "next/font/google";
 import "./globals.css";
 
-const display = Fraunces({
+const display = Cormorant_Garamond({
   subsets: ["latin"],
+  weight: ["500", "600", "700"],
   variable: "--font-display",
 });
 
-const corpo = Nunito_Sans({
+const corpo = Source_Sans_3({
   subsets: ["latin"],
+  weight: ["400", "600", "700"],
   variable: "--font-body",
 });
 
@@ -25,7 +27,7 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#100c08",
+  themeColor: "#f6f1e7",
   width: "device-width",
   initialScale: 1,
 };
